@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package javaapplication1;
-
+import javaapplication1.Dictionnary;
 /**
  *
  * @author Clément
@@ -20,6 +20,7 @@ public class ScrabbleConsole {
     
     public static void main(String[] args) {
         System.out.println("Welcome to the Scrabble assistant");
+        Dictionnary dico = new Dictionnary();
     }
     
 }
