@@ -23,6 +23,8 @@ public class ScrabbleConsole
                 System.out.println("Welcome to the Scrabble assistant");
                 Dictionnary dico = new Dictionnary();
                 System.out.println(Arrays.toString(dico.getWordList()));
+
+                System.out.println(dico.isValidWord("test"));
         }
 
         public static void main(String[] args)

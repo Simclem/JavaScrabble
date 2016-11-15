@@ -11,21 +11,40 @@ package javaapplication1;
  */
 public class Dictionnary
 {
-        String[] Dico;
-
+        private final String[] Dico;
+        private int nbWord;
 
         public Dictionnary()
         {
-            Dico = new String[12];
+            int nbWord = 5; 
+            Dico = new String[nbWord];
             Dico[0] = "abricot";
             Dico[1] = "châtaigne";
             Dico[2] = "groseille";
             Dico[3] = "pomme";
-            Dico[3] = "tomate";
-            System.out.print(Dico[0] + "\n");
+            Dico[4] = "tomate";
+
         }
             public String[] getWordList()
             {
                     return Dico;
+            }
+            
+            
+            
+            public boolean isValidWord( String str)
+            {
+                   int i;
+                   boolean found = false;
+                   for (i = 0 ; i  <= nbWord    ; i ++)
+                   {
+                       
+                       if (Dico[i].equals(str))
+                       {
+                           found = true;
+                       }
+
+                   }
+                   return found;
             }
 }
