@@ -77,7 +77,30 @@ public class Dictionnary
                     }
             }
             
+            public void printNbWord()
+            {
+                System.out.println(this.nbWord);
+            }
             
+            
+            public void displayExo10()
+            {
+                if (nbWord > 1)
+                {
+                        System.out.println(this.nbWord + " words loaded. From " + Dico[0] + " to " + Dico[nbWord -1]);
+                }
+                else
+                {
+                    if (nbWord == 1)
+                    {
+                        System.out.println("Only one word found : " + Dico[0] );
+                    }
+                    else
+                    {
+                        System.out.println("0 word founded. Sorry, the dictionnary is empty");
+                    }
+                }
+            }
             
             public boolean isValidWord( String str)
             {

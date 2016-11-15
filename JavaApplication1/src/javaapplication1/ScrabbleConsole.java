@@ -23,9 +23,8 @@ public class ScrabbleConsole
                 System.out.println("Welcome to the Scrabble assistant");
                 //Dictionnary dico = new Dictionnary();
                 Dictionnary dico = new Dictionnary("./fr_FR_utf8.dico");
-                System.out.println(Arrays.toString(dico.getWordList()));
-
-                System.out.println(dico.isValidWord("test"));
+                //System.out.println(Arrays.toString(dico.getWordList()));
+                dico.displayExo10();
         }
 
         public static void main(String[] args)
