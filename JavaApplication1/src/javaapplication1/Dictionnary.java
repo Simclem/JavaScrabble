@@ -97,7 +97,7 @@ public class Dictionnary
                     }
                     else
                     {
-                        System.out.println("0 word founded. Sorry, the dictionnary is empty");
+                        System.out.println("0 word founded. Sorry, the dictionnary is empty or the file was not founded");
                     }
                 }
             }
@@ -117,4 +117,33 @@ public class Dictionnary
                    }
                    return found;
             }
+            
+            public boolean mayBeComposed(String word, char[] letters)
+            {
+                int i ;
+                int y;
+                int cptLetters;
+                char wordComponent [] = word.toCharArray();
+                for ( i = 0 ; i < wordComponent.length; i ++)
+                {
+                    cptLetters = 0;
+                    for (y=0; y < letters.length; y ++)
+                    {
+                        if(Character.toUpperCase(wordComponent[i]) == Character.toUpperCase(letters[y]))
+                        {
+                            cptLetters +=1;
+                        }
+                        
+                    }
+                    if (cptLetters == 0 )
+                    {
+                        System.out.println("The caracter : " + wordComponent[i]+ " was not found.");
+                        return false;
+                    }
+                }
+                return true;
+            }
+            
+            
+            
 }
