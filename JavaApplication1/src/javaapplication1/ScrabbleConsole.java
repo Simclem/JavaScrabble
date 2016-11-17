@@ -36,6 +36,11 @@ public class ScrabbleConsole
                 System.out.println("Please now enter letters that you can place");
                 String letters = sc.nextLine();
                 char toTestLetters[] = letters.toCharArray();
+                
+                System.out.println(dico.replaceFrenchCharacter(word));
+                
+                
+                
                 System.out.println(dico.mayBeComposed(word , toTestLetters));
         }
 

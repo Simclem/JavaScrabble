@@ -118,6 +118,32 @@ public class Dictionnary
                    return found;
             }
             
+            public static String replaceFrenchCharacter(String S)
+            {
+                S = S.replace('à', 'a');
+                S = S.replace('â', 'a');
+                S = S.replace('ä', 'a');
+                S = S.replace('ç', 'c');
+                S = S.replace('é', 'e');
+                S = S.replace('è', 'e');
+                S = S.replace('ê', 'e');
+                S = S.replace('ë', 'e');
+                S = S.replace('ï', 'i');
+                S = S.replace('î', 'i');
+                S = S.replace('ô', 'o');
+                S = S.replace('ö', 'o');
+                S = S.replace('ù', 'u');
+                S = S.replace('ü', 'u');
+                
+                
+                
+                System.out.println("Yesy " + S);
+                return S;
+            }
+            
+            
+            
+            
             public boolean mayBeComposed(String word, char[] letters)
             {
                 int i ;
