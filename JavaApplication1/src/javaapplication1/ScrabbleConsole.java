@@ -37,11 +37,11 @@ public class ScrabbleConsole
                 String letters = sc.nextLine();
                 char toTestLetters[] = letters.toCharArray();
                 
-                System.out.println(dico.replaceFrenchCharacter(word));
+               // System.out.println(dico.replaceFrenchCharacter(word));
                 
+                System.out.println("We founded theses word : " + dico.getWordsThatCanBeComposed(toTestLetters));
                 
-                
-                System.out.println(dico.mayBeComposed(word , toTestLetters));
+                //System.out.println(dico.mayBeComposed(word , toTestLetters));
         }
 
         public static void main(String[] args)

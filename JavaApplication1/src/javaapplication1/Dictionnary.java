@@ -182,11 +182,43 @@ public class Dictionnary
 
             }
             
-            /* public String[] getWordsThatCanBeComposed(char [] letters)
+            public String[] getWordsThatCanBeComposed(char [] letters)
             {
-                 
+                    int nbWordRetained = 0 ;
+                    for (int i = 0 ; i < nbWord ; i ++)
+                    {
+                        if (mayBeComposed(Dico[i], letters) == true)
+                        {
+                            nbWordRetained+=1;
+                        }
+                    }
+                    if (nbWordRetained == 0)
+                    {
+                        System.out.println("We can't build a word with this letters");
+                        return null;
+                    }
+                    else
+                    {
+                                             int y  = 0 ;
+                        String wordComposed[] = new String[nbWordRetained];
+   
+                        for ( int i = 0  ; i < nbWord; i ++)
+                        {
+                                if (mayBeComposed(Dico[i], letters) == true)
+                                {
+                                    wordComposed[y] = Dico[i];
+                                    System.out.println(wordComposed[y]);
+                                    y +=1;
+                                    
+                                }
+                        }
+                        System.out.println(y);
+                        return wordComposed;
+                    }
+                    
+                    
             }
-            */
+            
             
             public boolean mayBeComposed(String word, char[] letters)
             {
@@ -207,7 +239,7 @@ public class Dictionnary
                     }
                     if (cptLetters == 0 )
                     {
-                        System.out.println("The caracter : " + wordComponent[i]+ " was not found.");
+                       // System.out.println("The caracter : " + wordComponent[i]+ " was not found.");
                         return false;
                     }
                 }
