@@ -120,6 +120,8 @@ public class Dictionnary
             
             public static String replaceFrenchCharacter(String S)
             {
+                int nbcharoe = 0 ;
+                int nbcharae = 0 ;
                 S = S.replace('à', 'a');
                 S = S.replace('â', 'a');
                 S = S.replace('ä', 'a');
@@ -134,15 +136,57 @@ public class Dictionnary
                 S = S.replace('ö', 'o');
                 S = S.replace('ù', 'u');
                 S = S.replace('ü', 'u');
+                for (int i =  0 ; i < S.length(); i ++)
+                {
+                    if (S.charAt(i) == 'œ')
+                    {
+                        nbcharoe+=1;
+                    }
+                    if (S.charAt(i) == 'æ')
+                    {
+                        nbcharae+=1;
+                    }
+                }
+                
+                if ((nbcharoe == 0) && (nbcharae  == 0 ))
+                {
+                    return S;
+                }
+                else
+                {
+                    String newS = new String();
+                    for (int i = 0 ; i < S.length(); i ++)
+                    {
+                        if (S.charAt(i) == 'æ')
+                       {
+                           newS += 'a';
+                           newS+='e';
+                       }
+                        else
+                        {
+                            if (S.charAt(i) == 'œ')
+                            {
+                                newS+='o';
+                                newS+='e';
+                            }
+                            else
+                            {
+                                newS+=S.charAt(i);
+                            }
+                        }
+                    }
+                    return newS;
+                }
                 
                 
-                
-                System.out.println("Yesy " + S);
-                return S;
+
             }
             
-            
-            
+            /* public String[] getWordsThatCanBeComposed(char [] letters)
+            {
+                 
+            }
+            */
             
             public boolean mayBeComposed(String word, char[] letters)
             {
