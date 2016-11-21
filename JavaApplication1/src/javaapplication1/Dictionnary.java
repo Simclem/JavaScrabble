@@ -40,8 +40,7 @@ public class Dictionnary
                 Path pathFile = Paths.get(PathGiven);
                 try
                 {
-                    Lines = Files.readAllLines(pathFile);
-
+                    Lines = Files.readAllLines(pathFile, Charset.forName("UTF-8"));
                 }catch (IOException  e)
                 {
                     System.out.println("Fichier introuvable");
