@@ -45,7 +45,6 @@ public class Dictionnary {
 
         }
 
-
         nbWord = Integer.parseInt(Lines.get(0));
         Dico = new String[nbWord];
 
